@@ -16,7 +16,16 @@ def create_download_link(df):
     return f'<a href="data:file/csv;base64,{b64}" download="{filename}">Download CSV File</a>'
 
 def main():
-    st.title('LiveChat Sentiment Analysis')
+    # Display logo and title centered
+    st.markdown(
+        """
+        <div style='text-align: center;'>
+            <img src='data:image/png;base64,{}' width='150'>
+            <h1 style='margin-top: 10px; font-size: 2em; display: inline-block;'>Data Team LiveChat Sentiment Analysis</h1>
+        </div>
+        """.format(get_image_as_base64("C:/Users/PM - Shift/Downloads/My Icons/Cenix Logo.png")),
+        unsafe_allow_html=True
+    )
     
     # Create input fields
     account_id = st.text_input('Account ID')
@@ -73,5 +82,10 @@ def main():
         except Exception as e:
             st.error(f'Error: {str(e)}')
             
+def get_image_as_base64(image_path):
+    with open(image_path, "rb") as image_file:
+        encoded_string = base64.b64encode(image_file.read()).decode()
+    return encoded_string
+
 if __name__ == '__main__':
     main()
