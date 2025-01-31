@@ -21,7 +21,7 @@ def main():
         """
         <div style='text-align: center;'>
             <img src='data:image/png;base64,{}' width='150'>
-            <h1 style='margin-top: 10px; font-size: 2em; display: inline-block;'>Data Team LiveChat Sentiment Analysis</h1>
+            <h1 style='margin-top: 10px; font-size: 2em; display: inline-block; color: #FF5100;'>Data Team LiveChat Sentiment Analysis</h1>
         </div>
         """.format(get_image_as_base64("Cenix Logo.png")),
         unsafe_allow_html=True
