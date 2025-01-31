@@ -23,7 +23,7 @@ def main():
             <img src='data:image/png;base64,{}' width='150'>
             <h1 style='margin-top: 10px; font-size: 2em; display: inline-block;'>Data Team LiveChat Sentiment Analysis</h1>
         </div>
-        """.format(get_image_as_base64("C:/Users/PM - Shift/Downloads/My Icons/Cenix Logo.png")),
+        """.format(get_image_as_base64("Cenix Logo.png")),
         unsafe_allow_html=True
     )
     
